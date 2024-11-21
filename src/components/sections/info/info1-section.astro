@@ -1,0 +1,33 @@
+---
+import InfoCard from '@/components/sections/info/components/info-card.astro';
+import PricingImage from '@/images/section/pricing.webp';
+import TrustedAdsImage from '@/images/section/trusted-ads.webp';
+---
+
+<div
+    class="mt-5 flex flex-col gap-5 bg-gradient-to-br from-[#F7F7E4] to-[##EEEFF1] px-10"
+>
+    <div class="mx-auto max-w-7xl px-10">
+        <div class="p-4">
+            <p class="text-5xl font-bold uppercase text-[#0f8ff4]">
+                high limited accounts
+            </p>
+            <p class="text-5xl font-bold uppercase text-[#393737]">
+                for your profit
+            </p>
+        </div>
+        <div class="flex flex-col items-center justify-center sm:flex-row">
+            <InfoCard
+                image={PricingImage}
+                title="Optimized Pricing"
+                description="Tailored plans designed for your specific needs with service fees starting from just 4%! Get the best value for your advertising with flexible, affordable pricing."
+            />
+            <InfoCard
+                image={TrustedAdsImage}
+                title="Trusted Ads Growth"
+                description="Partner with MDG Agency for trusted ad account rentals and dedicated support. Achieve sustainable growth and maximize ROI with confidence."
+                className="max-w-full sm:max-w-44"
+            />
+        </div>
+    </div>
+</div>

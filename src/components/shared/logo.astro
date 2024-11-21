@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+
+import { getOptimizedLogo } from '@/components/shared/optimized-logo';
+const optimizedLogo = await getOptimizedLogo();
+---
+
+<a href="/" aria-label="Return to homepage">
+    <Image
+        src={optimizedLogo.src}
+        alt="Logo"
+        width={70}
+        height={70}
+        class=""
+        loading="eager"
+        format="webp"
+        quality={80}
+        decoding="async"
+        fetchpriority="high"
+    />
+</a>
+
+<script is:inline>
+    if (!window.__logoCacheInitialized) {
+        const logoImage = document
+            .querySelector('a[aria-label="Return to homepage"] img');
+
+        if (logoImage && 'caches' in window) {
+            const logoSrc = logoImage.getAttribute('src');
+            if (logoSrc) {
+                caches.open('site-assets').then((cache) => {
+                    cache.match(logoSrc).then((response) => {
+                        if (!response) {
+                            cache.add(logoSrc).catch((error) => {
+                                console.warn('Failed to cache logo:', error);
+                            });
+                        }
+                    });
+                });
+            }
+        }
+        window.__logoCacheInitialized = true;
+    }
+</script>

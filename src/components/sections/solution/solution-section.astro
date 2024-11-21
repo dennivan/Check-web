@@ -1,0 +1,81 @@
+---
+import CachedImage from '@/components/shared/cachedImage.astro';
+import Laptop from '@/images/section/laptop.webp';
+import Laptop2 from '@/images/section/laptop2.webp';
+import Phone from '@/images/section/phone.webp';
+---
+
+<section class="w-full bg-white py-16 md:px-8 lg:px-16">
+    <div class="mx-auto max-w-7xl px-10">
+        <div class="mb-16 space-y-2">
+            <h2
+                class="font-roboto text-4xl font-bold uppercase text-[#0f8ff4] md:text-5xl lg:text-6xl"
+            >
+                We are always proactive in
+            </h2>
+            <h2
+                class="font-roboto text-4xl font-bold uppercase text-[#393737] md:text-5xl lg:text-6xl"
+            >
+                solving client issues
+            </h2>
+        </div>
+
+        <div class="grid gap-6">
+            <div class="flex w-full justify-between px-10">
+                <div class="flex w-1/2 flex-col gap-4">
+                    <div class="rounded-2xl border border-[#020101]/25 p-8">
+                        <div class="flex max-w-xl space-y-2">
+                            <p
+                                class="w-3/4 font-roboto text-xl font-semibold leading-relaxed text-[#393737]"
+                            >
+                                We always support and replace advertising
+                                accounts when issues arise.
+                            </p>
+                            <CachedImage
+                                src={Laptop}
+                                alt="laptop1"
+                                class="w-36"
+                            />
+                        </div>
+                    </div>
+                    <div class="rounded-2xl border border-[#020101]/25 p-8">
+                        <div class="flex max-w-xl space-y-2">
+                            <p
+                                class="w-3/4 font-roboto text-xl font-semibold leading-relaxed text-[#393737]"
+                            >
+                                Support and training for advertising campaign
+                                launching
+                            </p>
+                            <CachedImage
+                                src={Laptop2}
+                                alt="laptop2"
+                                class="w-36"
+                            />
+                        </div>
+                    </div>
+                    <div class="mt-8 space-y-2">
+                        <h3
+                            class="font-roboto text-2xl font-bold leading-9 text-[#393737] md:text-3xl"
+                        >
+                            Stable spend: with our accounts you can <span
+                                class="text-[#0f8ff4]"
+                                >consistently spend $3.000/day</span
+                            >
+                        </h3>
+                    </div>
+                    <div class="space-y-1">
+                        <p
+                            class="font-roboto text-xl leading-relaxed text-[#393737]"
+                        >
+                            Risk-management: there's guarantee of safety of
+                            money and moneyback at any moment
+                        </p>
+                    </div>
+                </div>
+                <div class="w-1/3">
+                    <CachedImage src={Phone} alt="phone" class="w-full" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

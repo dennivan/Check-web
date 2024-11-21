@@ -1,0 +1,31 @@
+---
+import CachedImage from '@/components/shared/cachedImage.astro';
+import HeroImage from '@/images/section/hero-image.webp';
+---
+
+<div
+    class='flex flex-col items-center justify-between gap-16 px-10 sm:flex-row'
+>
+    <div class='flex w-full flex-col gap-4 sm:w-1/2'>
+        <p class='text-5xl font-extrabold text-[#3d3d3d]'>MDG AGENCY</p>
+        <p class='text-4xl font-extrabold text-[#0f8ff4]'>
+            SOLUTIONS FOR FACEBOOK & GOOGLE ADS
+        </p>
+        <p class='text-lg font-medium text-[#3d3d3d]'>
+            Come aboard with MDG Agency today and unlock a Premium Agency Ad
+            Account to supercharge your revenue growth. Say goodbye to concerns
+            about restrictions and ad account suspensions
+        </p>
+        <p class='text-lg font-medium text-[#3d3d3d]'>
+            Enjoy limitless budget utilisation and experience exclusive
+            privileges with our Premium customer accounts when you opt for our
+            advertising services.
+        </p>
+    </div>
+    <CachedImage
+        src={HeroImage}
+        alt='Hero Image'
+        loading='eager'
+        class='h-auto max-w-[420px]'
+    />
+</div>

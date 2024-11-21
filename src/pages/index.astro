@@ -1,0 +1,22 @@
+---
+import Info1Section from '@/components/sections/info/info1-section.astro';
+import Info2Section from '@/components/sections/info/info2-section.astro';
+import MainSection from '@/components/sections/main-section.astro';
+import ServiceSection from '@/components/sections/service-section/service-section.astro';
+import SolutionSection from '@/components/sections/solution/solution-section.astro';
+import MainLayout from '@/layouts/main-layout.astro';
+---
+
+<MainLayout title="Home | MDG Agency - Facebook Ads Account Rental Service">
+    <div class="bg-gradient-to-b from-[#F5F5E0] via-[#F4F5EF] to-[#EEEFF1]">
+        <div class="mx-auto max-w-7xl p-4">
+            <MainSection />
+        </div>
+    </div>
+    <ServiceSection />
+    <Info1Section />
+    <Info2Section />
+    <div class="flex w-full items-center justify-center">
+        <SolutionSection />
+    </div>
+</MainLayout>
